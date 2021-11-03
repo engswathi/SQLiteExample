@@ -22,8 +22,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        btnCreate= findViewById(R.id.btnCreate);
-        btnInsert= findViewById(R.id.btnInsert);
+        initialiseViews();
 
         db_path = MainActivity.this.getDatabasePath("Country").getPath();
 
@@ -56,5 +55,11 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+    }
+
+    private void initialiseViews() {
+
+        btnCreate= findViewById(R.id.btnCreate);
+        btnInsert= findViewById(R.id.btnInsert);
     }
 }
