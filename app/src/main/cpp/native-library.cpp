@@ -27,11 +27,7 @@ Java_com_example_sqlitedbexample_NativeLibrary_createDb(JNIEnv *env, jobject thi
 
     /* Execute SQL statement */
     rc = sqlite3_exec(db, createQuery, NULL, 0, &errMsg);
-
-
-//    const char *insertQuery =
-//    "INSERT INTO cities VALUES (NULL,'London');";
-//    rc = sqlite3_exec(db, insertQuery, NULL, 0, &errMsg);
+    
 
     if (rc != SQLITE_OK) {
         sqlite3_free(errMsg);
